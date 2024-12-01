@@ -6,7 +6,6 @@
     <title>ARTLIXIR - Art Auction House</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
-    
 </head>
 <body>
     <nav class="nav">
@@ -23,7 +22,16 @@
             <a href="registration.html">Register</a>
             <a href="#contact">Contact</a>
         </div>
+        <button class="mobile-menu-btn">☰</button>
     </nav>
+
+    <div class="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="registration.html">Register</a>
+        <a href="#contact">Contact</a>
+    </div>
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -108,8 +116,17 @@
             });
         });
 
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
         // Initialize countdown
         updateCountdown();
     </script>
 </body>
 </html>
+
